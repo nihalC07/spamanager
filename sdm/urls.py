@@ -22,4 +22,6 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', 'appointment.views.login', name='home'),
+    url(r'^appointment/', include("appointment.urls")),
+    url(r'^accounts/', include('registration.backends.default.urls')),
     ]
